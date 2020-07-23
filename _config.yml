@@ -1,16 +1,16 @@
 remote_theme: christianezeani/panthera-jekyll
 title: Markus Reiter-Haas
-subtitle: University Assistant
-description: University Assistant @Graz University of Technology
+subtitle: "University Assistant\n@Graz University of Technology"
+description: Personal Github Page of Markus Reiter-Haas
 
 menu:
   - text: Profile
     link: "#profile"
-    icon: ""
-
-  - text: Linkes
-    link: "#links"
-    icon: ""
+    icon: fas fa-user-circle
+    
+  - text: Publications
+    link: "#publications"
+    icon: fas fa-file-alt
 
 social_icons:
   - name: linkedin
