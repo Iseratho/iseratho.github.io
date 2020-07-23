@@ -1,3 +1,16 @@
 remote_theme: christianezeani/panthera-jekyll
 title: Markus Reiter-Haas
-description: Data Scientist @Moshbit
+description: University Assistant @Graz University of Technology
+
+social_icons:
+  - name: linkedin
+    link: https://www.linkedin.com/in/markus-reiter-haas/
+    icon: fab fa-linkedin
+
+  - name: github
+    link: https://github.com/Iseratho
+    icon: fab fa-github-square
+
+  - name: twitter
+    link: https://www.twitter.com/Iseratho
+    icon: fab fa-twitter
