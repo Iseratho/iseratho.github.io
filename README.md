@@ -66,4 +66,4 @@ In Workshop on Recommender Systems and Social Network Analysis (RS-SNA'2017) co-
 - How we revolutionized the future of HR.  
 Fifteen Seconds 2019.
 
--Styria AI Slam (2019)
+- Styria AI Slam (2019)
