@@ -45,6 +45,14 @@ Research on deeplearning for job recommenders
 
 # Publications
 
+- Reiter-Haas, M., Wittenbrink, D., & Lacic, E. (2020, September). 
+On the Heterogeneous Information Needs in the Job Domain: A Unified Platform for Student Career. 
+In Fourteenth ACM Conference on Recommender Systems (pp. 573-574).
+
+- Reiter-Haas, M. (2020). 
+Evaluation of Job Recommendations for the Studo Jobs Platform.
+MA thesis.
+
 - Lacic, E., Reiter-Haas, M., Kowald, D., Dareddy, M. R., Cho, J., & Lex, E. (2020).  
 Using autoencoders for session-based job recommendations.  
 In User Modeling and User-Adapted Interaction, 1-42.  
@@ -67,3 +75,8 @@ In Workshop on Recommender Systems and Social Network Analysis (RS-SNA'2017) co-
 Fifteen Seconds 2019.
 
 - Styria AI Slam (2019)
+
+## Press
+
+- [Polarisation on COVID-19 debate.](https://nachrichten.idw-online.de/2020/09/21/verschwoerung-oder-fakten-forschungsergebnisse-von-uni-graz-und-tu-graz-zeigen-polarisierung-in-der-corona-debatte-auf/) (in German)
+Informationsdienst Wissenschaft e.V. -idw- 2020.
