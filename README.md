@@ -1,8 +1,10 @@
 # Profile
 
-Markus Reiter-Haas is a researcher at Graz University of Technology. His research deals with polarization in public opinion. More details are provided at the [project page](https://socialcomplab.github.io/polarization/).
+Markus Reiter-Haas is a researcher at Graz University of Technology. His research deals with polarization in public opinion ([Refer to the project page for more details](https://socialcomplab.github.io/polarization/)). 
 
-He was previously a researcher at Moshbit GmbH and was responsible for the recommender system of the Talto career platform.There his research concentrated on creating low-dimensional embeddings for effective retrieval in the job domain. He has a background in Computer Science at the Graz University of Technology with a focus on Knowledge Technologies. His master thesis tackled the evaluation of student jobrecommendations on the Talto predecessor Studo Jobs. 
+Short summary of his background is provided below (for a detailed overview refer to [his CV](https://iseratho.github.io/markdown-cv/)).
+
+<!-- He was previously a researcher at Moshbit GmbH and was responsible for the recommender system of the Talto career platform.There his research concentrated on creating low-dimensional embeddings for effective retrieval in the job domain. He has a background in Computer Science at the Graz University of Technology with a focus on Knowledge Technologies. His master thesis tackled the evaluation of student jobrecommendations on the Talto predecessor Studo Jobs.  -->
 
 ## Research Interests
 
@@ -45,7 +47,7 @@ Research Focus: NLP in SocialSystems
 Moshbit GmbH (Talto - Talents of Tomorrow)  
 Research on deeplearning for job recommenders
 
-# Publications
+<!-- # Publications
 
 - Reiter-Haas, M., Klösch, B., Hadler, M., & Lex, E. (2020).  
 **Bridging the Gap of Polarization in Public Opinion on Misinformed Topics.**  
@@ -90,4 +92,4 @@ PhD project
 ## Press
 
 - [Polarisation on COVID-19 debate.](https://nachrichten.idw-online.de/2020/09/21/verschwoerung-oder-fakten-forschungsergebnisse-von-uni-graz-und-tu-graz-zeigen-polarisierung-in-der-corona-debatte-auf/) (in German)
-Informationsdienst Wissenschaft e.V. -idw- 2020.
+Informationsdienst Wissenschaft e.V. -idw- 2020. -->
