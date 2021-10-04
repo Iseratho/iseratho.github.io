@@ -1,10 +1,4 @@
-# Profile
-
-Markus Reiter-Haas is a researcher at Graz University of Technology. His research deals with polarization in public opinion ([Refer to the project page for more details](https://socialcomplab.github.io/polarization/)). 
-
-Short summary of his background is provided below (for a detailed overview refer to [his CV](https://iseratho.github.io/markdown-cv/)).
-
-<!-- He was previously a researcher at Moshbit GmbH and was responsible for the recommender system of the Talto career platform.There his research concentrated on creating low-dimensional embeddings for effective retrieval in the job domain. He has a background in Computer Science at the Graz University of Technology with a focus on Knowledge Technologies. His master thesis tackled the evaluation of student jobrecommendations on the Talto predecessor Studo Jobs.  -->
+Markus Reiter-Haas is a researcher at Graz University of Technology. 
 
 ## Research Interests
 
@@ -16,6 +10,14 @@ Short summary of his background is provided below (for a detailed overview refer
 - Item Embeddings
 - Recommender Systems
 - Information Retrieval
+
+## Phd Project
+
+His research deals with polarization in public opinion ([Refer to the project page for more details](https://socialcomplab.github.io/polarization/)). 
+
+## CV
+
+Short summary of his background is provided below (for a detailed overview refer to [his CV](https://iseratho.github.io/markdown-cv/)).
 
 # Education
 
@@ -93,3 +95,6 @@ PhD project
 
 - [Polarisation on COVID-19 debate.](https://nachrichten.idw-online.de/2020/09/21/verschwoerung-oder-fakten-forschungsergebnisse-von-uni-graz-und-tu-graz-zeigen-polarisierung-in-der-corona-debatte-auf/) (in German)
 Informationsdienst Wissenschaft e.V. -idw- 2020. -->
+
+<!-- ## Old profile
+He was previously a researcher at Moshbit GmbH and was responsible for the recommender system of the Talto career platform.There his research concentrated on creating low-dimensional embeddings for effective retrieval in the job domain. He has a background in Computer Science at the Graz University of Technology with a focus on Knowledge Technologies. His master thesis tackled the evaluation of student jobrecommendations on the Talto predecessor Studo Jobs.  -->
