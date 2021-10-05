@@ -1,4 +1,5 @@
 Markus Reiter-Haas is a researcher at Graz University of Technology. 
+He is part of the [Recommender Systems and Social Computing Lab](https://socialcomplab.github.io/) at the [Institute of Interactive Systems and Data Science](https://www.tugraz.at/institute/isds/research/research-groups/social-computing/).
 
 ## Research Interests
 
