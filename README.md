@@ -1,5 +1,6 @@
 Markus Reiter-Haas is a researcher at Graz University of Technology. 
-He is part of the [Recommender Systems and Social Computing Lab](https://socialcomplab.github.io/) at the [Institute of Interactive Systems and Data Science](https://www.tugraz.at/institute/isds/research/research-groups/social-computing/).
+He is part of the [Recommender Systems and Social Computing Lab](https://socialcomplab.github.io/) at the [Institute of Interactive Systems and Data Science](https://www.tugraz.at/institute/isds/research/research-groups/social-computing/). 
+His thesis focuses on polarization and framing in online media using computational models and theories from the social sciences. His research interests include contextualized embeddings and semantic representations in natural language processing. He has a background in information retrieval in the industry, where he was responsible for the deep-learning recommender system of a job platform. He published in international renowned venues such as RecSys, ICWSM, and SSCR. Likewise, he provided reviewing services to the top conferences in the field of computer science, such as WWW and SIGIR.
 
 ## Research Interests
 
