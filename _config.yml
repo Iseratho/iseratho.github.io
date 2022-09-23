@@ -21,6 +21,10 @@ menu:
   - text: Publications
     link: "#publications"
     icon: fas fa-file-alt
+    
+  - text: CV
+    link: /embedded_cv
+    icon: ""
 
 social_icons:
   - name: linkedin
