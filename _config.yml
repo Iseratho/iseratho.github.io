@@ -40,8 +40,8 @@ social_icons:
     icon: fab fa-twitter-square
     
   - name: mastodon
-    link: <a rel='me' href='https://mastodon.online/@iseratho'>Mastodon</a>
-    icon: <i class='fa-brands fa-mastodon'></i>
+    link: https://mastodon.online/@iseratho
+    icon: fa-brands fa-mastodon
 
   - name: scholar
     link: https://scholar.google.at/citations?user=IN-hA_gAAAAJ
