@@ -21,6 +21,12 @@ His research deals with polarization in public opinion ([Refer to the project pa
 
 Short summary of his background is provided below (for a detailed overview refer to [his CV](https://iseratho.github.io/markdown-cv/)).
 
+# Teaching
+
+- Advanced Information Retrieval  
+[Hans-on Lecture on Transformers4IR](https://www.kaggle.com/code/markusreiterhaas/advanced-information-retrieval-7-transformers4ir)  
+[Highlighted Projects of the course](https://socialcomplab.github.io/advancedIR-2022-showcase/)  
+
 # Education
 
 - Doctorate in Computer Science  
