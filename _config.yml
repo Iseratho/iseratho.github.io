@@ -6,9 +6,9 @@ plugins:
   - jekyll-seo-tag
 
 menu:
-  - text: Profile
-    link: "#profile"
-    icon: fas fa-user-circle
+#   - text: Profile
+#     link: "#profile"
+#     icon: fas fa-user-circle
     
   - text: Education
     link: "#education"
@@ -18,12 +18,12 @@ menu:
     link: "#experience"
     icon: fas fa-briefcase
     
-  - text: Publications
-    link: "#publications"
-    icon: fas fa-file-alt
+#   - text: Publications
+#     link: "#publications"
+#     icon: fas fa-file-alt
     
   - text: CV
-    link: /embedded_cv
+    link: /markdown-cv
     icon: ""
 
 social_icons:
@@ -41,7 +41,7 @@ social_icons:
     
   - name: mastodon
     link: https://mastodon.online/@iseratho
-    icon: fa-brands fa-mastodon
+    icon: fab fa-mastodon
 
   - name: scholar
     link: https://scholar.google.at/citations?user=IN-hA_gAAAAJ
