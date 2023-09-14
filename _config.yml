@@ -9,6 +9,10 @@ menu:
 #   - text: Profile
 #     link: "#profile"
 #     icon: fas fa-user-circle
+
+  - text: Teaching
+    link: "#teaching"
+    icon: ""
     
   - text: Education
     link: "#education"
@@ -17,6 +21,10 @@ menu:
   - text: Experience
     link: "#experience"
     icon: fas fa-briefcase
+
+  - text: Blog Posts
+    link: /posts
+    icon: ""
     
 #   - text: Publications
 #     link: "#publications"
