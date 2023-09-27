@@ -24,7 +24,7 @@ Short summary of his background is provided below (for a detailed overview refer
 # Teaching
 
 Advanced Information Retrieval Course:  
-- [Hans-on Lecture on Transformers4IR (WS22)](https://www.kaggle.com/code/markusreiterhaas/advanced-information-retrieval-7-transformers4ir)  
+- [Hands-on Lecture on Transformers4IR (WS22)](https://www.kaggle.com/code/markusreiterhaas/advanced-information-retrieval-7-transformers4ir)  
 - [Highlighted Projects of the course (WS22)](https://socialcomplab.github.io/advancedIR-2022-showcase/)  
 - OERs: [Lecture Overview](teaching/Advanced_IR_Positioning.pdf), [Sample Concept](teaching/Sample_AIR_Concept.pdf), [Search vs Generative](teaching/ChatGPT_vs_Google_Search.pdf)  
 
