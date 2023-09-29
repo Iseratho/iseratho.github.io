@@ -1,3 +1,10 @@
+---
+layout: post
+title: "I don't like auto-regressive LMs"
+date: 2023-09-29
+tags: [research, ai]
+---
+
 # I don't like auto-regressive LMs
 
 > It is no secret that I am skeptical about the capabilities of pure autoregressive LMs like GPT. On the flip side, I am a big fan of autoencoding models (e.g., BERT). In this post, I am briefly going to state my opinion on the two parts of the Transformer architecture.
