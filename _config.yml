@@ -6,33 +6,41 @@ plugins:
   - jekyll-seo-tag
 
 menu:
-#   - text: Profile
-#     link: "#profile"
-#     icon: fas fa-user-circle
+  - text: About
+    link: /
+    icon: fas fa-user-circle
+
+  - text: CV
+    link: /markdown-cv
+    icon: fas fa-id-card
+
+  - text: PhD Project
+    link: /phd
+    icon: fas fa-project-diagram
+    
+  - text: Research
+    link: /research
+    icon: fas fa-vial
 
   - text: Teaching
-    link: "#teaching"
-    icon: ""
-    
-  - text: Education
-    link: "#education"
-    icon: fas fa-graduation-cap
-
-  - text: Experience
-    link: "#experience"
-    icon: fas fa-briefcase
+    link: /teaching
+    icon: fas fa-chalkboard-teacher
 
   - text: Blog Posts
     link: /posts
-    icon: ""
+    icon: fas fa-pen
+
+# - text: Education
+#   link: "#education"
+#   icon: fas fa-graduation-cap
+
+# - text: Experience
+#   link: "#experience"
+#   icon: fas fa-briefcase
     
 #   - text: Publications
 #     link: "#publications"
 #     icon: fas fa-file-alt
-    
-  - text: CV
-    link: /markdown-cv
-    icon: ""
 
 social_icons:
   - name: linkedin
@@ -53,4 +61,12 @@ social_icons:
 
   - name: scholar
     link: https://scholar.google.at/citations?user=IN-hA_gAAAAJ
-    icon: fab fa-google
+    icon: fas fa-graduation-cap
+
+  - name: orcid
+    link: https://orcid.org/my-orcid?orcid=0000-0001-9852-8206
+    icon: fab fa-orcid
+
+  - name: scholar
+    link: https://www.researchgate.net/profile/Markus-Reiter-Haas
+    icon: fab fa-researchgat
