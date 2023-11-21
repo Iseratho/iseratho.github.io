@@ -7,27 +7,27 @@ His thesis focuses on polarization and framing in online media using computation
 My Website is structured as follows.  
 Click the headers or use the sidebar.  
 
-## [CV](cv/)
+## [CV](cv)
 
 A very brief summary of his background is also provided below.
 
-## [Research](research/)
+## [Research](research)
 
 Applying **Transformer models** for Text Understanding.  
 
-## [PhD Project](phd/)
+## [PhD Project](phd)
 
 He is part of a research group that deals with **polarization in public opinion**.  
 
-## [PhD Thesis](thesis/)
+## [PhD Thesis](thesis)
 
 His thesis deals with **computational framing analysis**.  
 
-## [Teaching](teaching/)
+## [Teaching](teaching)
 
 Currently teaching **Advanced Information Retrieval**.  
 
-## [Blog Posts](posts/)
+## [Blog Posts](posts)
 
 Currently Blogging a critical reflection on **LLMs** in light of Transformer models.  
 
