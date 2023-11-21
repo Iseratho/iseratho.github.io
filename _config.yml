@@ -14,13 +14,17 @@ menu:
     link: /cv
     icon: fas fa-id-card
 
-  - text: PhD Project
-    link: /phd
-    icon: fas fa-project-diagram
-    
   - text: Research
     link: /research
     icon: fas fa-vial
+
+  - text: PhD Project
+    link: /phd
+    icon: fas fa-project-diagram
+
+  - text: PhD Thesis
+    link: /thesis
+    icon: fas fa-book
 
   - text: Teaching
     link: /teaching
