@@ -11,7 +11,7 @@ menu:
     icon: fas fa-user-circle
 
   - text: CV
-    link: /markdown-cv
+    link: /cv
     icon: fas fa-id-card
 
   - text: PhD Project
