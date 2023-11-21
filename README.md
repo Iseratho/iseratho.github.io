@@ -2,38 +2,38 @@ Markus Reiter-Haas is a researcher at Graz University of Technology.
 He is part of the [Recommender Systems and Social Computing Lab](https://socialcomplab.github.io/) at the [Institute of Interactive Systems and Data Science](https://www.tugraz.at/institute/isds/research/research-groups/social-computing/). 
 His thesis focuses on polarization and framing in online media using computational models and theories from the social sciences. His research interests include contextualized embeddings and semantic representations in natural language processing. He has a background in information retrieval in the industry, where he was responsible for the deep-learning recommender system of a job platform. He published in international renowned venues such as RecSys, ICWSM, and SSCR. Likewise, he provided reviewing services to the top conferences in the field of computer science, such as WWW and SIGIR.
 
-## Research Interests
+# Structure
 
-- Natural Language Processing
-- Social Network Analysis
-- Network Science
-- Machine Learning
-- Deep Learning
-- Item Embeddings
-- Recommender Systems
-- Information Retrieval
+My Website is structured as follows.  
+Click the headers or use the sidebar.  
 
-## Phd Project
+## [CV](cv/)
 
-His research deals with polarization in public opinion ([Refer to the project page for more details](https://socialcomplab.github.io/polarization/)). 
+A very brief summary of his background is also provided below.
 
-## CV
+## [Research](research/)
 
-Short summary of his background is provided below (for a detailed overview refer to [his CV](https://iseratho.github.io/markdown-cv/)).
+Applying **Transformer models** for Text Understanding.  
 
-# Teaching
+## [PhD Project](phd/)
 
-Advanced Information Retrieval Course:  
-- [Hands-on Lecture on Transformers4IR (WS22)](https://www.kaggle.com/code/markusreiterhaas/advanced-information-retrieval-7-transformers4ir)  
-- [Highlighted Projects of the course (WS22)](https://socialcomplab.github.io/advancedIR-2022-showcase/)  
-- OERs: [Lecture Overview](teaching/Advanced_IR_Positioning.pdf), [Sample Concept](teaching/Sample_AIR_Concept.pdf), [Search vs Generative](teaching/ChatGPT_vs_Google_Search.pdf)  
+He is part of a research group that deals with **polarization in public opinion**.  
 
-Other Lectures on:  
-- Web Technology  
-- Polarization  
-- Social Media  
+## [PhD Thesis](thesis/)
 
-# Education
+His thesis deals with **computational framing analysis**.  
+
+## [Teaching](teaching/)
+
+Currently teaching **Advanced Information Retrieval**.  
+
+## [Blog Posts](posts/)
+
+Currently Blogging a critical reflection on **LLMs** in light of Transformer models.  
+
+# Very Short CV
+
+## Education
 
 - Doctorate in Computer Science  
 Technische Universität Graz (2020 – ongoing)  
@@ -53,7 +53,7 @@ Passed with distinction
 HTBLA Kaindorf an der Sulm (2006 – 2011)  
 Passed with distinction  
 
-# Experience
+## Experience
 
 - University Assistant (2020 – Present)  
 Technische Universität Graz  
