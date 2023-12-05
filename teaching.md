@@ -15,6 +15,7 @@ Code (hosted on Kaggle):
 
 Slides (as Reveal.js HTML pages):  
 - [Transformers4IR: Re-ranking + Retrieval (AIR WS23)](https://iseratho.github.io/teaching/transformers4ir/air23-transformer4ir-tutorial)
+- [Deep Learning with PyTorch Tutorial (WS23)](https://iseratho.github.io/teaching/pytorch4dl101/air23-pytorch-4-dl-101)
 
 OERs:  
 - [Lecture Overview](teaching/Advanced_IR_Positioning.pdf)
