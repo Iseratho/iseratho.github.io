@@ -30,6 +30,10 @@ menu:
     link: /teaching
     icon: fas fa-chalkboard-teacher
 
+  - text: Materials
+    link: /materials
+    icon: fas fa-layer-group
+
   - text: Blog Posts
     link: /posts
     icon: fas fa-pen
