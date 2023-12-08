@@ -9,7 +9,7 @@ Click the headers or use the sidebar.
 
 ## [CV](cv)
 
-A very brief summary of his background is also provided below.
+A very brief summary of his background (e.g., his education and experiene in **data science**) is also provided below.
 
 ## [Research](research)
 
