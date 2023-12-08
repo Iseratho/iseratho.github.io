@@ -3,6 +3,7 @@ layout: post
 title: "Comparing Text Decoders and Image Diffusers"
 date: 2023-11-21
 tags: [research, ai]
+image: /images/book_v_painting.jpg
 ---
 
 # Comparing Text Decoders and Image Diffusers

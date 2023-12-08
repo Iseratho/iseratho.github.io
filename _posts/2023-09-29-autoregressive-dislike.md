@@ -3,6 +3,7 @@ layout: post
 title: "I don't like auto-regressive LMs"
 date: 2023-09-29
 tags: [research, ai]
+image: /images/tangled_emoji.jpg
 ---
 
 # I don't like auto-regressive LMs

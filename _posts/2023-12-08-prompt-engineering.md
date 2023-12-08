@@ -3,6 +3,7 @@ layout: post
 title: "Retracing and Returning from Prompt Engineering"
 date: 2023-12-08
 tags: [research, ai]
+image: /images/keyboard.jpg
 ---
 
 # Retracing and Returning from Prompt Engineering
