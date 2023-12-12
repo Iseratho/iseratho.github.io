@@ -24,7 +24,7 @@ The target group of this initial part of my blog is people with intermediate kno
 
 Finally, I want to disclose that the banner images were created with Copilot. Why I still like image generators conditioned on text can be read in my blog ;-)
 
-This concludes the first series of my blog. I might revisit it, if newer models (e.g., Gemini being a recent example) would truly lead to fundamental advancements. If you want to learn more about Transformers, I recommend the information on HuggingFace, e.g., their course: https://huggingface.co/learn/nlp-course/
+This concludes the first series of my blog. I might revisit it, if newer models (e.g., Gemini being a recent example) would truly lead to fundamental advancements. If you want to learn more about Transformers, I recommend the information on HuggingFace, e.g., their course: [https://huggingface.co/learn/nlp-course/](https://huggingface.co/learn/nlp-course/)
 
 > Version 0.1; Errata: -
 
