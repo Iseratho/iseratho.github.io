@@ -22,6 +22,11 @@ OERs:
 - [Sample Concept](teaching/Sample_AIR_Concept.pdf)
 - [Search vs Generative](teaching/ChatGPT_vs_Google_Search.pdf)  
 
+Certificates:
+- [OER Practioner](teaching/certs/P-2023-060_Reiter-Haas-signed.pdf)
+- [Teaching Academy: Module Advanced](teaching/certs/module_advanced.pdf)
+- [Teaching Academy: Module Basic](teaching/certs/module_basic.pdf)
+
 ## Other Lectures
 
 Topics span:  
