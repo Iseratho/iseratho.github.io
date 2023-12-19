@@ -14,6 +14,7 @@ Code (hosted on Kaggle):
 - [Hands-on Lecture on Transformers4IR (WS22)](https://www.kaggle.com/code/markusreiterhaas/advanced-information-retrieval-7-transformers4ir)
 
 Slides (as Reveal.js HTML pages):  
+- [Automation with LLMs](https://iseratho.github.io/teaching/automationLLMs/automation_with_llms)
 - [Transformers4IR: Re-ranking + Retrieval (AIR WS23)](https://iseratho.github.io/teaching/transformers4ir/air23-transformer4ir-tutorial)
 - [Deep Learning with PyTorch Tutorial (WS23)](https://iseratho.github.io/teaching/pytorch4dl101/air23-pytorch-4-dl-101)
 
