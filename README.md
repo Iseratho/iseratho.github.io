@@ -13,7 +13,7 @@ A very brief summary of his background (e.g., his education and experiene in **d
 
 ## [Research](research)
 
-Applying **Transformer models** for Text Understanding.  
+Displays ORCID record. Current focus on applying **Transformer models** for Text Understanding.  
 
 ## [PhD Project](phd)
 
@@ -26,6 +26,10 @@ His thesis deals with **computational framing analysis**.
 ## [Teaching](teaching)
 
 Currently teaching **Advanced Information Retrieval**.  
+
+## [Materials](materials)
+
+List of other relevant materials, such as **scientific presentations and posters** for conferences.
 
 ## [Blog Posts](posts)
 
