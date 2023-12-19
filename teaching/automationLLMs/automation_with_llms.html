@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title></title>
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/white.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="plugin/customcontrols/style.css">
+	<link rel="stylesheet" href="plugin/chalkboard/style.css">
+
+	<link rel="stylesheet" href="plugin/reveal-pointer/pointer.css" />
+
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			let size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				while(element.scrollHeight > element.offsetHeight){
+					size--;
+					element.style.fontSize = `${size}px`;
+				}
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template"><!-- .slide: class="drop" template="" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Automation with LLMs
+
+
+
+
+[Markus Reiter-Haas](https://iseratho.github.io/)<a href="https://orcid.org/0000-0001-9852-8206"><sup><i class="fab fa-orcid fa-sm"></i></sup></a>  
+University Assistant at TU Graz (ISDS)
+
+2023-12-21
+<br></br><br></br>
+
+
+<div class="footnotes" role="doc-endnotes">
+<ol>
+<li id="fn:" role="doc-endnote" class="footnote"><p>
+
+Presentation created using Markdown, HTML, CSS, and YAML in Obsidian and presented using Reveal.js. 
+
+</p></li></ol>
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Agenda
+<br></br><br></br><br></br><br></br><br></br><br></br>
+
+<div class="" style="position: absolute; left: 0%; top: 0%; height: 100%; width: 65%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+- Apply LLMs programmatically for Problem Solving (part1)
+- How and Why it works, as well as What doesn't work (part2)
+- Beyond Basic Prompting (part3)
+</div>
+
+<div class="" style="position: absolute; left: 65%; top: 0%; height: 100%; width: 35%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<div class="strikethrough"> 
+<img src="attachments/Pasted image 20231115002129.png" alt="" style="object-fit: scale-down">
+
+</div>
+</div>
+
+
+
+
+
+<style>
+.footnotes {
+	font-size: x-large;
+}
+/* https://stackoverflow.com/questions/14593415/how-to-strike-through-obliquely-with-css. */
+.strikethrough {
+  position: relative;
+}
+.strikethrough:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 10px solid;
+  border-color: red;
+  
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -ms-transform:rotate(-45deg);
+  -o-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+}
+</style>
+
+<div class="" style="position: absolute; left: 0%; top: 0%; height: 10%; width: 10%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<div class="block">
+
+Overview
+</div>
+
+
+
+</div>
+<div class="" style="position: absolute; left: 0%; top: 94%; height: 6%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<span style="font-size: large">Presentation by Markus Reiter-Haas</span>
+</div>
+</div>
+
+<aside class="notes"><p>Chat Interfaces: good for single tasks, but not automation</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+##  Motivation
+<br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+
+<div class="" style="position: absolute; left: 0%; top: 0%; height: 100%; width: 60%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Word2Vec 2013 &rarr; Attention 2014 &rarr; Transformers 2017
+
+Gradual Improvements:  
+- BERT (2018), BART (2019), GPT (1-3, 2018-2020)
+- Vision Transformers (2020)
+- Failed Attempts at LLMs (Galactica 2022, 3 days)
+
+Until:
+- **ChatGPT** released on November 30, 2022
+- Many from Industry since (Bard, Llama)
+- Towards Open-Source (Alpaca, Llama2, Falcon)
+</div>
+
+<div class="" style="position: absolute; left: 60%; top: 0%; height: 100%; width: 40%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Explosion of Model Size:
+<img src="https://huggingface.co/blog/assets/33_large_language_models/01_model_size.jpg" alt="Models over Time" style="object-fit: scale-down">
+
+</div>
+
+
+
+<style>
+.footnotes {
+	font-size: x-large;
+}
+/* https://stackoverflow.com/questions/14593415/how-to-strike-through-obliquely-with-css. */
+.strikethrough {
+  position: relative;
+}
+.strikethrough:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 10px solid;
+  border-color: red;
+  
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -ms-transform:rotate(-45deg);
+  -o-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+}
+</style>
+
+<div class="" style="position: absolute; left: 0%; top: 0%; height: 10%; width: 10%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+</div>
+<div class="" style="position: absolute; left: 0%; top: 94%; height: 6%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<span style="font-size: large">Presentation by Markus Reiter-Haas</span>
+</div>
+</div>
+
+<aside class="notes"><p>Log scale<br>ChatGPT release --&gt; personal story</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## About Prompting 
+
+Different roles in prompts:
+```
+[System] You are a helpful assistant.
+[User] Who won the world series in 2020?
+[Assistant] The Los Angeles Dodgers won the World Series in 2020.
+[User] Where was it played?
+[Assistant]
+```
+
+Additional structure can be introduced,  
+e.g., for instruction fine-tuning (Alpaca):
+
+```
+### Instruction:
+{instruction}
+
+### Input:
+{input}
+
+### Response:
+```
+
+
+
+
+
+<style>
+.footnotes {
+	font-size: x-large;
+}
+/* https://stackoverflow.com/questions/14593415/how-to-strike-through-obliquely-with-css. */
+.strikethrough {
+  position: relative;
+}
+.strikethrough:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 10px solid;
+  border-color: red;
+  
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -ms-transform:rotate(-45deg);
+  -o-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+}
+</style>
+
+<div class="" style="position: absolute; left: 0%; top: 0%; height: 10%; width: 10%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<div class="block">
+
+Part1
+</div>
+
+
+
+</div>
+<div class="" style="position: absolute; left: 0%; top: 94%; height: 6%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<span style="font-size: large">Presentation by Markus Reiter-Haas</span>
+</div>
+</div>
+
+<aside class="notes"><p>Possible to provide assistant responses</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Automating 
+  
+
+ChatGPT API Docs: https://platform.openai.com/docs/
+
+Request (e.g., via curl):
+```http
+POST https://api.openai.com/v1/chat/completions
+
+Content-Type: application/json
+Authorization: Bearer $OPENAI_API_KEY
+```
+
+Payload:
+```json
+{
+    "model": "gpt-3.5-turbo",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a helpful assistant."
+      },
+      {
+        "role": "user",
+        "content": "Hello!"
+      }
+    ]
+}
+```
+
+
+
+<style>
+.footnotes {
+	font-size: x-large;
+}
+/* https://stackoverflow.com/questions/14593415/how-to-strike-through-obliquely-with-css. */
+.strikethrough {
+  position: relative;
+}
+.strikethrough:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 10px solid;
+  border-color: red;
+  
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -ms-transform:rotate(-45deg);
+  -o-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+}
+</style>
+
+<div class="" style="position: absolute; left: 0%; top: 0%; height: 10%; width: 10%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+</div>
+<div class="" style="position: absolute; left: 0%; top: 94%; height: 6%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<span style="font-size: large">Presentation by Markus Reiter-Haas</span>
+</div>
+</div>
+
+<aside class="notes"><p>Basic HTTP Request<br>Endpoints in Docs</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Under the Hood - How does it work?
+<br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+
+<div class="" style="position: absolute; left: 0%; top: 0%; height: 100%; width: 40%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<br></br>
+<img src="https://machinelearningmastery.com/wp-content/uploads/2021/08/attention_research_1.png" alt="Transformers|500" style="width: 500px; object-fit: fill">
+
+Transformer Architecture
+</div>
+
+<div class="" style="position: absolute; left: 40%; top: 0%; height: 100%; width: 60%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Attention Layer Equation:   
+
+$
+softmax(\frac{Q \times K^T}{\sqrt{d_k}})V = Z
+$
+
+&rarr; Repeats until stop (token or max)
+
+Tokenized text:
+```
+[CLS] This is an example sequence . 
+[SEP] Another sequen ##tial text 
+[SEP]
+```
+
+Embeddings:
+```
+sequen --> [-0.2, 0.4, ..., 0.5], ##tial --> [0.1, -0.3, ..., 0.9], ...
+```
+</div>
+
+
+
+
+
+<style>
+.footnotes {
+	font-size: x-large;
+}
+/* https://stackoverflow.com/questions/14593415/how-to-strike-through-obliquely-with-css. */
+.strikethrough {
+  position: relative;
+}
+.strikethrough:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 10px solid;
+  border-color: red;
+  
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -ms-transform:rotate(-45deg);
+  -o-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+}
+</style>
+
+<div class="" style="position: absolute; left: 0%; top: 0%; height: 10%; width: 10%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<div class="block">
+
+**Part2**
+</div>
+
+
+
+</div>
+<div class="" style="position: absolute; left: 0%; top: 94%; height: 6%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<span style="font-size: large">Presentation by Markus Reiter-Haas</span>
+</div>
+</div>
+
+<aside class="notes"><p>No details --&gt; brevity<br>Think of: weighted database query</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Under the Hood - Why does it work so well?
+<br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+
+<div class="" style="padding: 0 0 0 50px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 100%; width: 45%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<br></br>
+<img src="https://jalammar.github.io/images/t/The_transformer_encoder_decoder_stack.png" alt="High-level" style="object-fit: scale-down">
+
+</div>
+
+<div class="" style="position: absolute; left: 50%; top: 0%; height: 100%; width: 50%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+- Scale Up: # Layers, # Heads  
+- Highly parallelizable = GPU.
+- Typically only Decoder  
+	due to efficient Training
+- Slow Generation (i.e., Inference)
+
+Stochastic Parrot?  
+&rarr; Impressive due to fluency
+</div>
+
+
+
+<style>
+.footnotes {
+	font-size: x-large;
+}
+/* https://stackoverflow.com/questions/14593415/how-to-strike-through-obliquely-with-css. */
+.strikethrough {
+  position: relative;
+}
+.strikethrough:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 10px solid;
+  border-color: red;
+  
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -ms-transform:rotate(-45deg);
+  -o-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+}
+</style>
+
+<div class="" style="position: absolute; left: 0%; top: 0%; height: 10%; width: 10%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+</div>
+<div class="" style="position: absolute; left: 0%; top: 94%; height: 6%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<span style="font-size: large">Presentation by Markus Reiter-Haas</span>
+</div>
+</div>
+
+<aside class="notes"><p>Philosophical debate: world knowledge</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="position: absolute; left: 0%; top: 0%; height: 100%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+## Limitations and Pitfalls
+<br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+</div>
+
+<div class="" style="position: absolute; left: 0%; top: 0%; height: 100%; width: 55%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<div class="callout callout-color7">
+<div class="callout-title">
+<div class="callout-icon">
+
+<i class="fas fa-bolt" ></i>
+
+
+</div>
+<div class="callout-title-inner">
+
+No real safeguards.
+
+</div>
+</div>
+<div class="callout-content">
+
+Do not do computation (math): <!-- .element: style="display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left" -->
+
+&rarr; Use traditional programs instead.  <!-- .element: style="display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left" -->
+
+<br></br>
+
+Problem with sources and veracity: <!-- .element: style="display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left" -->
+
+&rarr; Use search instead. <!-- .element: style="display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left" -->
+
+</div>
+</div>
+</div>
+
+<div class="" style="position: absolute; left: 55%; top: 0%; height: 100%; width: 45%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<img src="https://pbs.twimg.com/media/Fm02WUeXoAENFTF.jpg:large" alt="Safe to Use|700" style="width: 700px; object-fit: fill">
+
+</div>
+
+
+
+<style>
+.footnotes {
+	font-size: x-large;
+}
+/* https://stackoverflow.com/questions/14593415/how-to-strike-through-obliquely-with-css. */
+.strikethrough {
+  position: relative;
+}
+.strikethrough:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 10px solid;
+  border-color: red;
+  
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -ms-transform:rotate(-45deg);
+  -o-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+}
+</style>
+
+<div class="" style="position: absolute; left: 0%; top: 0%; height: 10%; width: 10%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+</div>
+<div class="" style="position: absolute; left: 0%; top: 94%; height: 6%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<span style="font-size: large">Presentation by Markus Reiter-Haas</span>
+</div>
+</div>
+
+<aside class="notes"><p>Right tool depends on the problem</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Beyond Prompting
+<br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+
+<div class="" style="padding: 0 0 0 100px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 100%; width: 60%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+*Example Idea to mitigate problem with sources*
+<br></br>
+**Retrieval Augmented Generation:**
+- First get sources (e.g., via Search)
+- Then use them as input (i.e., context)  
+  and generate summary
+  <br></br>
+- For instance with Company Data
+</div>
+
+<div class="" style="padding: 0 60px 0 0; box-sizing: border-box; position: absolute; left: 55%; top: 0%; height: 100%; width: 45%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*kSkeaXRvRzbJ9SrFZaMoOg.png" alt="RAG Workflow" style="object-fit: scale-down">
+
+Retrieval Augmented Generation Workflow
+</div>
+
+
+
+
+
+<style>
+.footnotes {
+	font-size: x-large;
+}
+/* https://stackoverflow.com/questions/14593415/how-to-strike-through-obliquely-with-css. */
+.strikethrough {
+  position: relative;
+}
+.strikethrough:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 10px solid;
+  border-color: red;
+  
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -ms-transform:rotate(-45deg);
+  -o-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+}
+</style>
+
+<div class="" style="position: absolute; left: 0%; top: 0%; height: 10%; width: 10%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<div class="block">
+
+Part3
+</div>
+
+
+
+</div>
+<div class="" style="position: absolute; left: 0%; top: 94%; height: 6%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<span style="font-size: large">Presentation by Markus Reiter-Haas</span>
+</div>
+</div>
+
+<aside class="notes"><p>Retrieval via vector database</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Customization
+
+Use specific models (from HuggingFace model repository 🤗),  
+e.g., `mistralai/Mistral-7B-v0.1`
+
+
+<!-- Create your own:
+- Finetune using Huggingface<sup id="fnref:1" role="doc-noteref">1</sup>
+<sup id="fnref:1" role="doc-noteref">2</sup>Cite huggingface
+-->
+
+```js
+async function query(data) {
+	const response = await fetch(
+		"https://api-inference.huggingface.co/models/mistralai/Mistral-7B-v0.1",
+		{
+			headers: { Authorization: "Bearer xxxxxxxxxxxxxxxxxxx",
+			"Content-Type": "application/json"},
+			method: "POST",
+			body: JSON.stringify(data),
+		}
+	);
+	const result = await response.json();
+	return result;
+}
+await query({"inputs": "Can you please let us know more details about your "})
+```
+
+```json
+[{"generated_text":"Can you please let us know more details about your 2018-2019 season?\n\nWe are a small, but very active club. We have 15 members, 10 of which are active. We have 2 meetings per month, one is a business meeting and the other is a social meeting. We have a lot of fun and we are very active in the community. We have a lot of fundraisers and we donate to many different organizations. We have a lot of fun and we are"}]
+```
+
+Finetune to create your own model
+<div class="callout callout-color5">
+<div class="callout-title">
+<div class="callout-icon">
+
+<i class="fas fa-exclamation-triangle" ></i>
+
+
+</div>
+<div class="callout-title-inner">
+
+Never train from Scratch
+
+</div>
+</div>
+<div class="callout-content">
+
+</div>
+</div>
+
+
+
+<style>
+.footnotes {
+	font-size: x-large;
+}
+/* https://stackoverflow.com/questions/14593415/how-to-strike-through-obliquely-with-css. */
+.strikethrough {
+  position: relative;
+}
+.strikethrough:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 10px solid;
+  border-color: red;
+  
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -ms-transform:rotate(-45deg);
+  -o-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+}
+</style>
+
+<div class="" style="position: absolute; left: 0%; top: 0%; height: 10%; width: 10%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+</div>
+<div class="" style="position: absolute; left: 0%; top: 94%; height: 6%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<span style="font-size: large">Presentation by Markus Reiter-Haas</span>
+</div>
+<div class="footnotes" role="doc-endnotes">
+<ol>
+</ol>
+</div>
+</div>
+
+<aside class="notes"><p>Host Inference API</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Outlook
+<br></br><br></br><br></br><br></br><br></br><br></br>
+
+<div class="" style="padding: 0 0 0 100px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 100%; width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Libraries: KeyBERT &rarr; KeyLLMs
+does enhance, but not solely rely on model.
+
+<div class="callout callout-color2">
+<div class="callout-title">
+<div class="callout-icon">
+
+<i class="fas fa-fire-alt" ></i>
+
+
+</div>
+<div class="callout-title-inner">
+
+Multimodal: Diffusion Models
+
+</div>
+</div>
+<div class="callout-content">
+
+</div>
+</div>
+</div>
+
+<div class="" style="padding: 0 0 0 100px; box-sizing: border-box; position: absolute; left: 30%; top: 0%; height: 100%; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+My Research: text representations for computational framing analysis.
+<img src="https://github.com/Iseratho/web23-phd-symposium/raw/main/Figure_1.png" alt="Personal Example|1200" style="width: 1200px; object-fit: fill">
+
+**&rarr; FrameFinder Demo/Library** https://huggingface.co/spaces/Iseratho/frame-finder
+</div>
+
+<br></br>
+### Lots of possibilites to get creative!
+
+
+
+<style>
+.footnotes {
+	font-size: x-large;
+}
+/* https://stackoverflow.com/questions/14593415/how-to-strike-through-obliquely-with-css. */
+.strikethrough {
+  position: relative;
+}
+.strikethrough:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 10px solid;
+  border-color: red;
+  
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -ms-transform:rotate(-45deg);
+  -o-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+}
+</style>
+
+<div class="" style="position: absolute; left: 0%; top: 0%; height: 10%; width: 10%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+</div>
+<div class="" style="position: absolute; left: 0%; top: 94%; height: 6%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<span style="font-size: large">Presentation by Markus Reiter-Haas</span>
+</div>
+</div>
+
+<aside class="notes"><p>Shows flexibility of Transformer models</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Conclusion 
+<!-- (easy to use, many possibilities, but be careful) -->
+
+LLMs are powerful  
+and can be incorporated in many tasks,  
+but should not be trusted blindly.  
+
+Should be enhanced with external knowledge.  
+
+<br></br>
+### Contact <!-- .element: class="fragment" data-fragment-index="1" -->
+> reiter-haas@tugraz.at <!-- .element: class="fragment" data-fragment-index="1" -->
+
+More infos on topic on my website and blog: <!-- .element: class="fragment" data-fragment-index="1" -->
+> https://iseratho.github.io/posts <!-- .element: class="fragment" data-fragment-index="1" -->
+
+
+
+<style>
+.footnotes {
+	font-size: x-large;
+}
+/* https://stackoverflow.com/questions/14593415/how-to-strike-through-obliquely-with-css. */
+.strikethrough {
+  position: relative;
+}
+.strikethrough:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 10px solid;
+  border-color: red;
+  
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -ms-transform:rotate(-45deg);
+  -o-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+}
+</style>
+
+<div class="" style="position: absolute; left: 0%; top: 0%; height: 10%; width: 10%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+</div>
+<div class="" style="position: absolute; left: 0%; top: 94%; height: 6%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<span style="font-size: large">Presentation by Markus Reiter-Haas</span>
+</div>
+</div>
+
+<aside class="notes"><p>End of brief intro</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## References
+
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). **Attention is all you need.** _Advances in neural information processing systems_, _30_.
+
+Grootendorst, M. (2020). **KeyBERT: Minimal keyword extraction with BERT.** https://doi.org/10.5281/zenodo.4461265
+
+Reiter-Haas, M. (2023). **Exploration of framing biases in polarized online content consumption.** In _Companion Proceedings of the ACM Web Conference 2023_ (pp. 560-564).
+
+Reiter-Haas, M., Klösch, B., Hadler, M., & Lex, E. (2023). **FrameFinder: Explorative Multi-Perspective Framing Extraction from News Headlines.** _Accepted for publication at CHIIR’24._
+
+<style>
+.footnotes {
+	font-size: x-large;
+}
+/* https://stackoverflow.com/questions/14593415/how-to-strike-through-obliquely-with-css. */
+.strikethrough {
+  position: relative;
+}
+.strikethrough:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 10px solid;
+  border-color: red;
+  
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -ms-transform:rotate(-45deg);
+  -o-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+}
+</style>
+
+<div class="" style="position: absolute; left: 0%; top: 0%; height: 10%; width: 10%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+</div>
+<div class="" style="position: absolute; left: 0%; top: 94%; height: 6%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<span style="font-size: large">Presentation by Markus Reiter-Haas</span>
+</div>
+</div></script></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/math/math.js"></script>
+	<script src="plugin/mermaid/mermaid.js"></script>
+	<script src="plugin/chart/chart.min.js"></script>
+	<script src="plugin/chart/plugin.js"></script>
+	<script src="plugin/menu/menu.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+	<script src="plugin/chalkboard/plugin.js"></script>
+	<script src="plugin/reveal-pointer/pointer.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+	  function isLight(color) {
+		let hex = color.replace('#', '');
+
+		// convert #fff => #ffffff
+		if(hex.length == 3){
+			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;
+		}
+
+		const c_r = parseInt(hex.substr(0, 2), 16);
+		const c_g = parseInt(hex.substr(2, 2), 16);
+		const c_b = parseInt(hex.substr(4, 2), 16);
+		const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+		return brightness > 155;
+	}
+
+	var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+	var isLight = isLight(bgColor);
+
+	if(isLight){
+		document.body.classList.add('has-light-background');
+	} else {
+		document.body.classList.add('has-dark-background');
+	}
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  RevealChart,
+		  RevealCustomControls,
+		  RevealMenu,
+	      RevealPointer,
+		  RevealChalkboard, 
+        ],
+
+
+    	allottedTime: 120 * 1000,
+
+		mathjax3: {
+			mathjax: 'plugin/math/mathjax/tex-mml-chtml.js',
+		},
+		markdown: {
+		  gfm: true,
+		  mangle: true,
+		  pedantic: false,
+		  smartLists: false,
+		  smartypants: false,
+		},
+
+		mermaid: {
+			theme: isLight ? 'default' : 'dark',
+		},
+
+		customcontrols: {
+			controls: [
+				{id: 'toggle-overview',
+				title: 'Toggle overview (O)',
+				icon: '<i class="fa fa-th"></i>',
+				action: 'Reveal.toggleOverview();'
+				},
+				{ icon: '<i class="fa fa-pen-square"></i>',
+				title: 'Toggle chalkboard (B)',
+				action: 'RevealChalkboard.toggleChalkboard();'
+				},
+				{ icon: '<i class="fa fa-pen"></i>',
+				title: 'Toggle notes canvas (C)',
+				action: 'RevealChalkboard.toggleNotesCanvas();'
+				},
+			]
+		},
+		menu: {
+			loadIcons: false
+		}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":1920,"height":1080,"margin":0.04,"controls":true,"controlsLayout":"edges","progress":true,"slideNumber":"c/t","transition":"slide","transitionSpeed":"fast"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+
+  <!-- created with Advanced Slides -->
+</html>
