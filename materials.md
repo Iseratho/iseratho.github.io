@@ -9,17 +9,17 @@
 ### 2023
 | Semantic Graphs Reveal the Narrative Framing in News | Exploration of Framing Biases in Polarized Online Content Consumption | Multilingual Label-Aware Contrastive Pre-Training of Transformers for Few- and Zero-shot Framing Detection |
 | --- | ---- | --- |
-| [![netsci23](materials/thumbs/netsci23.png)](materials/posters/netsci23.pdf) | [![docdays23](materials/thumbs/docdays23.png)](materials/posters/docdays23.pdf) | [![semeval23](materials/thumbs/semeval23.png)](materials/posters/semeval23.pdf) |
+| {::nomarkdown}<a href="materials/posters/netsci23.pdf"><img src="materials/thumbs/netsci23.png" alt="netsci23"></a>{:/} | {::nomarkdown}<a href="materials/posters/docdays23.pdf"><img src="materials/thumbs/docdays23.png" alt="docdays23"></a>{:/} | {::nomarkdown}<a href="materials/posters/semeval23.pdf"><img src="materials/thumbs/semeval23.png" alt="semeval23"></a>{:/} |
 
 ### 2022
 | Framing in Polarized Online Media | Unsupervised Transformer-Based Differentiation of Corpus Semantics | Computational Framing Analysis in Online Media |
 | --- | --- | --- |
-| [![phdretreat22](materials/thumbs/phdretreat22.png)](materials/posters/phdretreat22.pdf) | [![graml22](materials/thumbs/graml22.png)](materials/posters/graml22.pdf) | [![acsd22](materials/thumbs/acsd22.png)](materials/posters/acsd22.pdf) |
+| {::nomarkdown}<a href="materials/posters/phdretreat22.pdf"><img src="materials/thumbs/phdretreat22.png" alt="phdretreat22"></a>{:/} | {::nomarkdown}<a href="materials/posters/graml22.pdf"><img src="materials/thumbs/graml22.png" alt="graml22"></a>{:/} | {::nomarkdown}<a href="materials/posters/acsd22.pdf"><img src="materials/thumbs/acsd22.png" alt="acsd22"></a>{:/} |
 
 ### 2021
 | Opinion Polarization on COVID-19 Measures: Integrating Surveys and Social Media Data | Studying Moral-based Differences in the Framing of Political Tweets  |
 | --- | --- |
-| [![ic2s2_21](materials/thumbs/ic2s2_21.png)](materials/posters/ic2s2_21.pdf) | [![icwsm21_teaser](materials/thumbs/icwsm21_teaser.png)](materials/posters/icwsm21_teaser.pdf) |
+| {::nomarkdown}<a href="materials/posters/ic2s2_21.pdf"><img src="materials/thumbs/ic2s2_21.png" alt="ic2s2_21"></a>{:/} | {::nomarkdown}<a href="materials/posters/icwsm21_teaser.pdf"><img src="materials/thumbs/icwsm21_teaser.png" alt="icwsm21_teaser"></a>{:/} |
 
 ## Presentations
 
