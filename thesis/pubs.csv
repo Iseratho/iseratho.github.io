@@ -1,0 +1,181 @@
+key,title,abstract,pages
+C1 Polarization,Polarization of opinions on COVID-19 measures: integrating twitter and survey data,"Polarization of public opinion is a major issue for societies, as high levels can promote adverse
+effects such as hostility. The present paper focuses on the polarization of opinions regarding COVID19 prevention measures in survey data and on Twitter in the German-speaking regions of Germany,
+Austria, and Switzerland. The level of polarization is measured by dispersion and bimodality in the
+opinions based on the sentiment in Twitter data and the agreement in the survey data. Our paper,
+however, goes beyond existing research as we consider data from both sources separately and
+comparatively. For this purpose, we matched individuals’ survey responses and tweets for those
+respondents who shared their Twitter account information. The analyses show that vaccination is
+more polarizing compared to mask wearing and contact tracing in both sources, that polarization
+of opinions is more pronounced in the survey data compared to the Twitter data, but also that
+individuals’ opinions about the COVID-19 measures are consistent in both sources. We believe
+our findings will provide valuable insights for integrating survey data and Twitter data to investigate
+opinion polarization.",26
+C2 Exploration,Exploration of framing biases in polarized online content consumption,"The study of framing bias on the Web is crucial in our digital age,
+as the framing of information can infuence human behavior and
+decision on critical issues such as health or politics. Traditional
+frame analysis requires a curated set of frames derived from manual
+content analysis by domain experts. In this work, we introduce a
+frame analysis approach based on pretrained Transformer models that let us capture frames in an exploratory manner beyond
+predefned frames. In our experiments on two public online news
+and social media datasets, we show that our approach lets us identify underexplored conceptualizations, such as that health-related
+content is framed in terms of beliefs for conspiracy media, while
+mainstream media is instead concerned with science. We anticipate
+our work to be a starting point for further research on exploratory
+computational framing analysis using pretrained Transformers.",5
+C3 Labels,mCPT at SemEval-2023 Task 3: Multilingual Label-Aware Contrastive Pre-Training of Transformers for Few-and Zero-shot Framing Detection,"This paper presents the winning system for
+the zero-shot Spanish framing detection task,
+which also achieves competitive places in eight
+additional languages. The challenge of the
+framing detection task lies in identifying a set
+of 14 frames when only a few or zero samples
+are available, i.e., a multilingual multi-label
+few- or zero-shot setting. Our developed solution employs a pre-training procedure based on
+multilingual Transformers using a label-aware
+contrastive loss function. In addition to describing the system, we perform an embedding
+space analysis and ablation study to demonstrate how our pre-training procedure supports
+framing detection to advance computational
+framing analysis.",9
+C4 Dimensions,Studying moral-based differences in the framing of political tweets,"In this paper, we study the moral framing of political con-tent on Twitter. Specifically, we examine differences in moralframing in two datasets: (i) tweets from US-based politiciansannotated with political affiliation and (ii) COVID-19 relatedtweets in German from followers of the leaders of the fivemajor Austrian political parties. Our research is based on re-cent  work  that  introduces  an  unsupervised  approach  to  ex-tract  framing  bias  and  intensity  in  news  using  a  dictionaryof moral virtues and vices. In this paper, we use a more ex-tensive dictionary and adapt it to German-language tweets.Overall, in both datasets, we observe a moral framing that iscongruent with the public perception of the political parties.In the US dataset, democrats have a tendency to frame tweetsin terms of care, while loyalty is a characteristic frame for re-publicans. In the Austrian dataset, we find that the followersof  the  governing  conservative  party  emphasize  care,  whichis a key message and moral frame in the party’s COVID-19campaign slogan. Our work complements existing studies onmoral framing in social media. Also, our empirical findingsprovide novel insights into moral-based framing on COVID-19 in Austria.",5
+C5 Structure,Framing Analysis of Health-Related Narratives using Semantic Graphs: Conspiracy versus Mainstream Media,"Understanding how online media frame issues is crucial due to their impact on
+public opinion. Research on framing using natural language processing techniques
+mainly focuses on specific content features in messages and neglects their
+narrative elements. Also, the distinction between framing in different sources
+remains an understudied problem. We address those issues and investigate how
+the framing of conspiracy theories on health-related topics, such as COVID-19,
+differs from their mainstream counterpart. We incorporate narrative information
+into the framing analysis by introducing a novel frame extraction approach based
+on semantic graphs. We find that health-related narratives in conspiracy media
+are predominantly framed in terms of beliefs and mainstream media in terms of
+science. We hope our work offers new ways for a more nuanced frame analysis.",23
+C6 Demo,FrameFinder: Explorative Multi-Perspective Framing Extraction from News Headlines,"Revealing the framing of news articles is an important yet ne-
+glected task in information seeking and retrieval. In the present
+work, we present FrameFinder, an open tool for extracting and
+analyzing frames in textual data. FrameFinder visually represents
+the frames of text from three perspectives, i.e., (i) frame labels, (ii)
+frame dimensions, and (iii) frame structure. By analyzing the well-
+established gun violence frame corpus, we demonstrate the merits
+of our proposed solution to support social science research and call
+for subsequent integration into information interactions",5
+C7 Behavior,The Framing Loop: Do Users Repeatedly Read Similar Framed News Online?,"It is well established in psychology that framing of content affects the behavior of people. This effect is, however, only sparsely
+explored in information-seeking and retrieval behavior. In the present work, we consider the diversity of consumed content and
+repetition patterns regarding their framing. We conduct a framing analysis in the MIcrosoft News Dataset (MIND) comprising textual
+content and user interaction behaviors. By extracting the frames of the item sequences, we uncover a tendency of users to consume
+similar framed news repeatedly when sticking to the same type of content. Consequently, framing biases are important to consider in
+information access systems. We hope that our work inspires future research on corresponding debiasing methods",13
+C8 Narrative,Computational Narrative Framing: Towards Identifying Frames through Contrasting the Evolution of Narrations,"Our understanding of the world is fundamentally shaped by language, with narrations being a central
+point, and influenced by its framing. Recent advancements in language models gave rise to computational
+methods for both narrative understanding and framing analysis. Although, given their overlap, these
+two strands are mostly researched independently. In this position paper, we argue for their consolidation
+in the form of narrative framing, i.e., the framing process driven by narrations. Herein, we outline
+similarities between both based on semantic elements. Besides, we discuss how different narratives
+might compete with each other, as well as evolve over time. Thereby, narratives inevitably change the
+framing, exemplarily depicted on the issue of climate change. We believe that the analysis of narrative
+frames will lead to a broader understanding of textual corpora as a whole rather than individual pieces
+of text.",7
+S1 Relistening,Predicting music relistening behavior using the ACT-R framework,"Providing suitable recommendations is of vital importance to improve the user satisfaction of music recommender systems. Here,
+users often listen to the same track repeatedly and appreciate recommendations of the same song multiple times. Thus, accounting
+for users’ relistening behavior is critical for music recommender
+systems. In this paper, we describe a psychology-informed approach
+to model and predict music relistening behavior that is inspired
+by studies in music psychology, which relate music preferences to
+human memory. We adopt a well-established psychological theory
+of human cognition that models the operations of human memory,
+i.e., Adaptive Control of Thought—Rational (ACT-R). In contrast to
+prior work, which uses only the base-level component of ACT-R,
+we utilize five components of ACT-R, i.e., base-level, spreading, partial matching, valuation, and noise, to investigate the effect of five
+factors on music relistening behavior: (i) recency and frequency of
+prior exposure to tracks, (ii) co-occurrence of tracks, (iii) the similarity between tracks, (iv) familiarity with tracks, and (v) randomness
+in behavior. On a dataset of 1.7 million listening events from Last.fm,
+we evaluate the performance of our approach by sequentially predicting the next track(s) in user sessions. We find that recency
+and frequency of prior exposure to tracks is an effective predictor
+of relistening behavior. Besides, considering the co-occurrence of
+tracks and familiarity with tracks further improves performance
+in terms of R-precision. We hope that our work inspires future
+research on the merits of considering cognitive aspects of memory
+retrieval to model and predict complex user behavior.",6
+S2 Bridging,Bridging the gap of polarization in public opinion on misinformed topics,"This research combines public opinion and social media data
+from German-speaking countries on polarizing topics from the same respondents. We analyze the survey data from a sociological perspective
+and the social media data from a computer science perspective. Results
+show that, e.g., Twitter users are less likely to believe in and tweet about
+non-natural origins of COVID-19 than the overall sample.",3
+S3 Glue,The climate gluing protests: Analyzing their development and framing in media since 1986 using sentiment analyses and frame detection models.,"Recent climate-related protests of the social movements “Extinction Rebellion”, “Just
+Stop Oil”, and others include actions such as defacing artwork and gluing oneself to
+objects and onto streets. Using sentiment analysis and frame detection models, we
+analyze a corpus that includes news articles from the 1980s onward and trace the
+development of gluing protests over time and how this type of protest is reported. Our
+analysis shows that this protest was initially employed for various issues such as
+abortion, criminal convictions, and environmental concerns. The strong focus on
+environmental and climate issues has emerged more prominently in recent years. It also
+reveals that the media reports are mostly negative, with comparatively fewer negative
+sentiments in public media. It also highlights that the prevalence of protesters’
+prognostic frames of “what to do” is limited, with policy and security questions taking
+precedence.",14
+S4 Humanize,Transparent Music Preference Modeling and Recommendation with a Model of Human Memory Theory,". In this chapter, we discuss how to utilize human memory
+models for the task of modeling music preferences for recommender systems. Therefore, we discuss the theoretical underpinnings of using cognitive models for user modeling and recommender systems in order to
+introduce a model based on the cognitive architecture ACT-R to predict
+the music genre preferences of users in the Last.fm platform. By implementing the declarative memory module of ACT-R, comprising past
+usage frequency and recency, as well as the current semantic context,
+we model the music relistening behavior of users. We evaluate our approach using three user groups that we identify in Last.fm, namely (i)
+low-mainstream music listeners, (ii) medium-mainstream music listeners, and (iii) high-mainstream music listeners. We find that our approach
+provides significantly higher prediction accuracy than various baseline algorithms for all three user groups, and especially for the low-mainstream
+user group. Since our approach is based on a well-established human
+memory model, we also discuss how this contributes to the transparency
+of the calculated predictions.",24
+S5 ACT-R+CF,Integrating the ACT-R framework with collaborative filtering for explainable sequential music recommendation,"Music listening sessions often consist of sequences including repeating tracks. Modeling such relistening behavior with models of
+human memory has been proven effective in predicting the next
+track of a session. However, these models intrinsically lack the capability of recommending novel tracks that the target user has not
+listened to in the past. Collaborative filtering strategies, on the contrary, provide novel recommendations by leveraging past collective
+behaviors but are often limited in their ability to provide explanations. To narrow this gap, we propose four hybrid algorithms
+that integrate collaborative filtering with the cognitive architecture
+ACT-R. We compare their performance in terms of accuracy, novelty,
+diversity, and popularity bias, to baselines of different types, including pure ACT-R, kNN-based, and neural-networks-based approaches.
+We show that the proposed algorithms are able to achieve the best
+performances in terms of novelty and diversity, and simultaneously
+achieve a higher accuracy of recommendation with respect to pure
+ACT-R models. Furthermore, we illustrate how the proposed models
+can provide explainable recommendations.",8
+S6 Desirability,Social desirability and the willingness to provide social media accounts in surveys. The case of environmental attitudes,"This paper contributes to the research on combining public opinion surveys
+and social media data by a) analyzing the effects of social desirability on the
+willingness to provide social media account information in surveys, and b)
+evaluating the congruence of opinions expressed in the survey and on social
+media. We analyze these questions by considering the willingness to make a
+sacrifice for the environment, i.e., the willingness to pay higher taxes and
+higher prices. Our results show that Facebook users who oppose
+environmental measures are less likely to share their account information in
+the survey, whereas this effect could not be found among Twitter users.
+Considering the congruence of opinions expressed in the survey and on
+Twitter, we find similar tendencies both at the aggregate and the individual
+level.",9
+S7 Willingness,Combining Survey and Social Media Data: Respondents' Opinions on COVID-19 Measures and Their Willingness to Provide Their Social Media Account Information,"Research on combining social survey responses and social media posts has shown that
+the willingness to share social media accounts in surveys depends on the mode of the
+survey and certain socio-demographics of the respondents. We add new insights to
+this research by demonstrating that the willingness to share their Facebook and Twitter
+accounts also depends on the respondents’ opinions on specific topics. Furthermore, we
+extend previous research by actually accessing their social media accounts and checking
+whether survey responses and tweets are coherent. Our analyses indicate that survey
+respondents who are willing to share their social media accounts hold more positive
+attitudes toward COVID-19 measures. The same pattern holds true when comparing
+their sentiments to a larger Twitter collection. Our results highlight another source of
+sampling bias when combining survey and social media data: a bias due to specific
+views, which might be related to social desirability",8
+S8 Role,Polarized opinions on Covid-19 and environmental policy measures. The role of social media use and personal concerns in German-speaking countries.,"The COVID-19 pandemic and the climate crisis are polarizing people’s opinions
+worldwide, particularly with regard to restrictive policy measures. We examine the
+effects of social media use and personal concerns on opinions toward selected
+COVID-19 and environmental measures, and whether public opinion toward the
+two crises shows similar polarization patterns. The data is derived from an online
+survey conducted in German-speaking countries in the summer of 2020. Our
+analyses show that opinions toward COVID-19 measures are more polarized than
+toward environmental measures, and that personal concerns play a far greater role
+than social media use in shaping opinions toward policy measures for both crises.
+Only few platforms show significant and divergent effects, which we attribute to
+their different characteristics and potentials for the emergence of filter bubbles and
+echo chambers. We also observe a generational effect, suggesting that older
+individuals are more likely to support COVID-19 measures, while younger
+generations tend to do so for environmental measures. Furthermore, we find an
+unexpectedly high number of people who are completely opposed to all policy
+measures for both crises, again mainly due to personal concerns and attitudes. The
+results are discussed in the context of the time period in which the survey was
+conducted, as well as in relation to current developments, and from the perspective
+of the free-rider problem as a possible explanation for the one-sided polarization
+observed.",24
