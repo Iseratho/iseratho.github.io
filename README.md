@@ -40,8 +40,8 @@ Currently Blogging a critical reflection on **LLMs** in light of Transformer mod
 ## Education
 
 - Doctorate in Computer Science  
-Technische Universität Graz (2020 – ongoing)  
-Polarization in Public Opinion  
+Technische Universität Graz (2020 – 2024)  
+[Computational Framing Analysis for Polarized Topics Online](thesis/thesis.pdf)  
 
 - Master in Computer Science  
 Technische Universität Graz (2017 – 2020)  
@@ -59,7 +59,7 @@ Passed with distinction
 
 ## Experience
 
-- University Assistant (2020 – Present)  
+- University Assistant (2020 – 2024)  
 Technische Universität Graz  
 Research Focus: NLP in SocialSystems
 
