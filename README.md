@@ -41,7 +41,8 @@ Currently Blogging a critical reflection on **LLMs** in light of Transformer mod
 
 - Doctorate in Computer Science  
 Technische Universität Graz (2020 – 2024)  
-[Computational Framing Analysis for Polarized Topics Online](thesis/thesis.pdf)  
+[Computational Framing Analysis for Polarized Topics Online](thesis/thesis.pdf)
+Passed with distinction  
 
 - Master in Computer Science  
 Technische Universität Graz (2017 – 2020)  
