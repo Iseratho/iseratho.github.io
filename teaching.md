@@ -41,6 +41,6 @@ OERs:
 
 Certificates:
 - [OER Practioner](teaching/certs/P-2023-060_Reiter-Haas-signed.pdf)
-- [Teaching Academy: Module Advanced](teaching/certs/module_expert.pdf)
+- [Teaching Academy: Module Expert](teaching/certs/module_expert.pdf)
 - [Teaching Academy: Module Advanced](teaching/certs/module_advanced.pdf)
 - [Teaching Academy: Module Basic](teaching/certs/module_basic.pdf) 
