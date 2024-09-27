@@ -1,5 +1,7 @@
 # Teaching
 
+Get the full summary of my teaching experience in [my teaching portfolio](teaching/Teaching_Portfolio.pdf).
+
 ## Courses
 
 ### Advanced Information Retrieval Course 
