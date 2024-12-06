@@ -33,6 +33,7 @@ Topics span:
 ## Publications
 
 eCampus Use Case on [Presenting program code](https://e-campus.st/moodle/course/view.php?id=84) (in German)  
+associated [Video on YouTube](https://www.youtube.com/watch?v=3wWXqbzm4S4)  
 
 OERs:  
 - [Lecture Overview](teaching/Advanced_IR_Positioning.pdf)
