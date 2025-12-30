@@ -2,7 +2,7 @@ Dr.techn. Markus Reiter-Haas is a postdoctoral researcher at the [Institute of H
 
 His research focuses on optimizing the three core pillars of modern socio-technical platforms: (1) reliable user behavior analysis and interventions, (2) effective item and document representations, and (3) ethical matching algorithms for information retrieval and recommendation systems. Currently, he is investigating how neuro-symbolic approaches can lead to trustworthy diversification of content in information systems.
 
-![3 Pillars](website_teaser.png)
+![3 Pillars](website_teaser.png | width=200)
 
 This work is supported by an interdisciplinary background that includes a postdoctoral fellowship at Duke University's [Polarization Lab](https://www.polarizationlab.com/team), a PhD in Computer Science focused on [Computational Framing Analysis](https://iseratho.github.io/thesis/thesis.pdf), and industry experience developing deep learning job matchmaking platforms.
 
