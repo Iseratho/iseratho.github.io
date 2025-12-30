@@ -1,6 +1,14 @@
-Markus Reiter-Haas is a researcher at Graz University of Technology. 
-He is part of the [Recommender Systems and Social Computing Lab](https://socialcomplab.github.io/) at the [Institute of Interactive Systems and Data Science](https://www.tugraz.at/institute/isds/research/research-groups/social-computing/). 
-His thesis focuses on polarization and framing in online media using computational models grounded in social science theories. His research interests include contextualized embeddings and semantic representations in natural language processing, with a focus on the Transformer architecture. He has a background in information retrieval in the industry, where he was responsible for the deep-learning recommender system of a job platform. He published in international renowned venues such as RecSys, ICWSM, and SSCR. Likewise, he supports the scientific community by providing reviewing services to the top conferences in the field of computer science, such as WWW, SIGIR, and ACL.
+Dr.techn. Markus Reiter-Haas is a postdoctoral researcher at the [Institute of Human-Centred Computing](https://hcc.tugraz.at/) at Graz University of Technology, where he is a member of the [AI for Society Lab](https://aisocietylab.github.io/) and the [Bilateral AI Cluster of Excellence](https://www.bilateral-ai.net/).
+
+His research focuses on optimizing the three core pillars of modern socio-technical platforms: (1) reliable user behavior analysis and interventions, (2) effective item and document representations, and (3) ethical matching algorithms for information retrieval and recommendation systems. Currently, he is investigating how neuro-symbolic approaches can lead to trustworthy diversification of content in information systems.
+
+This work is supported by an interdisciplinary background that includes a postdoctoral fellowship at Duke University's [Polarization Lab](https://www.polarizationlab.com/team), a PhD in Computer Science focused on [Computational Framing Analysis](https://iseratho.github.io/thesis/thesis.pdf), and industry experience developing deep learning job matchmaking platforms.
+
+Dr. Reiter-Haas has published in internationally renowned venues, including the SSCR journal [1], the SemEval Workshop (where he achieved first place in Spanish framing detection [2]), and the RecSys conference [3]. A passionate educator, he actively supports the scientific community as a program committee member for top-tier conferences such as TheWebConf.
+
+[1] Reiter-Haas, M., Klösch, B., Hadler, M., & Lex, E. (2023). **Polarization of opinions on COVID-19 measures: Integrating Twitter and survey data.** _Social Science Computer Review, 41(5), 1811-1835._  
+[2] Reiter-Haas, M., Ertl, A., Innerebner, K., & Lex, E. (2023). **mCPT at SemEval-2023 Task 3: Multilingual Label-Aware Contrastive Pre-Training of Transformers for Few-and Zero-shot Framing Detection.** _In Proceedings of the 17th International Workshop on Semantic Evaluation (SemEval-2023), pages 941–949, Toronto, Canada. Association for Computational Linguistics._  
+[3] Reiter-Haas, M., Wittenbrink, D., & Lacic, E. (2020, September). **On the Heterogeneous Information Needs in the Job Domain: A Unified Platform for Student Career.** _In Fourteenth ACM Conference on Recommender Systems (pp. 573-574)._  
 
 # Structure
 
@@ -33,9 +41,27 @@ List of other relevant materials, such as **scientific presentations and posters
 
 ## [Blog Posts](posts)
 
-Currently Blogging a critical reflection on **LLMs** in light of Transformer models.  
+Blogging a critical reflection on **LLMs** in light of Transformer models.  
 
-# Very Short CV
+# Very Brief CV
+
+## Experience
+
+- Postdoctoral University Project Assistant (since 2025)  
+Technische Universität Graz, Institute of Human-Centred Computing, AI for Society Lab, Bilateral AI Cluster of Excellence  
+Trustworthy Recommender Systems with Neuro-Symbolic AI  
+
+- Postdoctoral Associate (2024 - 2025)  
+Duke University, Department of Statistical Science, The Polarization Lab  
+Researching Social Media Interventions with RCTs using LLMs  
+
+- University Assistant (2020 – 2024)  
+Technische Universität Graz, Institute of Interactive Systems and Data Science, Recommender Systems and Social Computing Lab  
+Researching Framing Representations in Polarized Media  
+
+- Data Scientist (2017-2020)  
+Moshbit GmbH, Talto - Talents of Tomorrow GmbH  
+Researching on Deeplearning Algorithms for Job Search and Recommendations  
 
 ## Education
 
@@ -58,15 +84,7 @@ Passed with distinction
 HTBLA Kaindorf an der Sulm (2006 – 2011)  
 Passed with distinction  
 
-## Experience
 
-- University Assistant (2020 – 2024)  
-Technische Universität Graz  
-Research Focus: NLP in SocialSystems
-
-- Data Scientist (2017-2020)  
-Moshbit GmbH (Talto - Talents of Tomorrow)  
-Research on deeplearning for job recommenders
 
 <!-- # Publications
 
