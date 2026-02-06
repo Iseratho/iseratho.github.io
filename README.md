@@ -12,6 +12,8 @@ Dr. Reiter-Haas has published in internationally renowned venues, including the 
 [2] Reiter-Haas, M., Ertl, A., Innerebner, K., & Lex, E. (2023). **mCPT at SemEval-2023 Task 3: Multilingual Label-Aware Contrastive Pre-Training of Transformers for Few-and Zero-shot Framing Detection.** _In Proceedings of the 17th International Workshop on Semantic Evaluation (SemEval-2023), pages 941–949, Toronto, Canada. Association for Computational Linguistics._  
 [3] Reiter-Haas, M., Wittenbrink, D., & Lacic, E. (2020, September). **On the Heterogeneous Information Needs in the Job Domain: A Unified Platform for Student Career.** _In Fourteenth ACM Conference on Recommender Systems (pp. 573-574)._  
 
+List of [Open Thesis Ideas](https://drive.google.com/file/d/1jkH_H6nDYSh9VYuDJIUEQctEhTkAfkLW/view?usp=sharing)
+
 # Structure
 
 My Website is structured as follows.  
